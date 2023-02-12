@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+
+{% block main %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" />
+</head>
+
+<body>
+
+    <div class="container1">
+        
+        <img src="{{url_for('static', filename='headerImg.jpg')}}" />
+        <div class="userCard">
+            <div class="mainColumn">
+                <h2 class="fullName"> Gabriell Gardner </h2>
+                <h5 class="userName"> @GGardner</h5>
+                <h5 class="location"> Kingston, Jamaica</h5>
+                <h5 class="joinDate"> {{ dateJoined }}</h5>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <p class="bio"> I am a smart and talented young woman who loves<br>
+            website design and development.Contact me if<br>
+            you'd like to work together on a new project.<br> </p>
+
+    </div>
+
+
+    <div class="container3">
+
+        <div class="cardRow">
+            <div class="column">
+              <div class="card1">
+                <h3>7</h3>
+                <p>Posts</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card2">
+                <h3>100</h3>
+                <p>Following</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card3">
+                <h3>250</h3>
+                <p>Followers</p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+        
+
+        <button type="followButton">Follow</button>
+
+
+</body>
+
+</html>
+
+{% endblock%}
